@@ -1,6 +1,5 @@
 import { Utility } from './types';
 
-// Registry of all available utilities
 export const UTILITIES: Record<string, Utility> = {
   'wifi': {
     id: 'wifi',

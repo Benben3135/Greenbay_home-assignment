@@ -1,4 +1,3 @@
-// Bar.tsx
 import React, { useRef, useEffect, useState } from 'react';
 import * as LucideIcons from 'lucide-react';
 import { BarProps } from './types';

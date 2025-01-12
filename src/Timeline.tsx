@@ -1,4 +1,3 @@
-// Timeline.tsx
 import React from 'react';
 import { TimelineProps } from './types';
 import Bar from './Bar';
@@ -25,7 +24,6 @@ const Timeline: React.FC<TimelineProps> = ({
     return diffInHours * hourWidth;
   };
 
-  // Get unique line names to display in left column
   const lines = Array.from(new Set(containers.map(c => c.lineName)));
 
   return (
@@ -54,9 +52,7 @@ const Timeline: React.FC<TimelineProps> = ({
             ))}
           </div>
 
-          {/* Timeline content */}
           <div style={{ width: `${totalWidth}px` }}>
-            {/* Time headers */}
             <div className="sticky top-0 flex bg-white border-b z-40">
               {times.map((timeObj, index) => (
                 <div
@@ -69,9 +65,7 @@ const Timeline: React.FC<TimelineProps> = ({
               ))}
             </div>
 
-            {/* Grid and Bars */}
             <div className="relative">
-              {/* Grid background */}
               {lines.map((lineName, lineIdx) => (
                 <div 
                   key={lineIdx}
@@ -88,7 +82,6 @@ const Timeline: React.FC<TimelineProps> = ({
                     />
                   ))}
                   
-                  {/* Bars for this line */}
                   {containers
                     .filter(container => container.lineName === lineName)
                     .map((container, containerIdx) => {

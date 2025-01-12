@@ -1,8 +1,7 @@
-// types.ts
 export type Utility = {
   id: string;
   name: string;
-  icon: string; // Lucide icon name
+  icon: string; 
 };
 
 export type BarProps = {
@@ -11,7 +10,6 @@ export type BarProps = {
   style?: React.CSSProperties;
 };
 
-// Timeline related types
 export type TimelineTime = {
   time: Date;
 };
